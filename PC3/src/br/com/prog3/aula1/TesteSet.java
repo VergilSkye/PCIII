@@ -1,4 +1,4 @@
-package br.com.prog3.aula1_2;
+package br.com.prog3.aula1;
 import java.util.*;
 public class TesteSet {
 	public static void main(String [] args) {

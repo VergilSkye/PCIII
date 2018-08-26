@@ -1,4 +1,4 @@
-package br.com.prog3.aula1_2;
+package br.com.prog3.aula1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -53,7 +53,7 @@ public class UsandoList {
         a1.setNome("Maria");
 
         a2.setMatricula(2);
-        a2.setNome("João");
+        a2.setNome("Joï¿½o");
 
         a3.setMatricula(4);
         a3.setNome("Andreia");

@@ -1,11 +1,11 @@
 package br.com.prog3.aula1;
 
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
-
-import br.com.prog3.aula1_2.Aluno;
 
 public class Condominio {
 
@@ -46,6 +46,15 @@ public class Condominio {
 		lista.removeIf((Apartamento ap) -> ap.getCodigo() == 5000);
 		long d = Calendar.getInstance().getTimeInMillis();
 		System.out.printf("Tempo de demora de remoção de um objeto da lista: %d%n \n",d-a);
+		
+		Map<Integer, Apartamento> aps = new HashMap<>();
+		aps.put(ap1.getCodigo(), ap1);
+		aps.put(ap2.getCodigo(), ap2);
+		aps.put(ap3.getCodigo(), ap3);
+		
+		for(Integer codigo : aps.keySet()) {
+			System.out.println(aps.get(codigo).toString());
+		}
 	}
 
 }

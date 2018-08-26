@@ -3,44 +3,43 @@ package br.com.prog3.trab1.questoes;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
+
+
+import javax.swing.JOptionPane;
 
 import br.com.prog3.trab1.classes.Servico;
 
 public class Q6 {
-	private static Scanner sc;
 
 	public static void main(String[] args) {
 
-		
-		sc = new Scanner(System.in);
-		Integer sair = 0;
+		int i =0; 
+		Object[] opcoes = {"Sim", "Não"} ;
+		String message = "\n Lista de serviços \n ";
 		List<Servico> lista = new ArrayList<Servico>();
 
-		
-		System.out.println("Digite 1 para acrecentar um serviço ou 0 para sair");		
-		sair = Integer.parseInt(sc.nextLine());
+		while(i == 0){
 
-		while(sair != 0){
-
-			System.out.print("Digite o preço Hora do Serviço ");
-			Servico srv = new Servico(Double.parseDouble(sc.nextLine()));
-			System.out.println("Digite a descrição: ");
-			srv.setDescricao(sc.nextLine());
-			System.out.println("Digite 1 para acrecentar um novo serviço ou 0 para sair");
-			sair = Integer.parseInt(sc.nextLine());
+			
+			Servico srv = new Servico(Double.parseDouble(JOptionPane.showInputDialog("Digite o valor hora do serviço")));
+			srv.setCodigo(Integer.parseInt(JOptionPane.showInputDialog("Digite o código")));
+			srv.setDescricao(JOptionPane.showInputDialog(("Digite a descrição")));
+			srv.setQtdHora(Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de horas")));
 			// Inserindo o objeto Servico srv no ArrayList lista
 			lista.add(srv);
+			i = JOptionPane.showOptionDialog(null, "Deseja Continuar", "Continuar?",JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,null, opcoes, opcoes[0]);
+			
+			
 		}
 		//Ordenando a lista pelo atributo descrição, implementanda na classe
 		Collections.sort(lista);
-		for(int i=0;i<lista.size();i++){
-			Servico s = lista.get(i);
-			System.out.printf("\nItem %d\n",i+1);
-			System.out.println(s.getDescricao());
-			System.out.println(s.getPrecoHora());
+		// Imprimindo a lista com o JOptionPane
+		for(Servico s: lista) {
+			message += "\n\n\n" + "Codigo:" + s.getCodigo() + "\nPreço Hora:" + s.getPrecoHora() 
+			+ "\nDescrição:" + s.getDescricao() + "\nQuantidade de Horas:" + s.getQtdHora()+"\n\n";
 		}
-
+		
+		JOptionPane.showMessageDialog(null, message);
 		System.out.println("Final da execução");
 	}
 

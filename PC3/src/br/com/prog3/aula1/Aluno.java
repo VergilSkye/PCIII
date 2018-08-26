@@ -1,4 +1,4 @@
-package br.com.prog3.aula1_2;
+package br.com.prog3.aula1;
 
 public class Aluno implements Comparable<Aluno> {
 	private Integer matricula;

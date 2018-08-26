@@ -18,15 +18,15 @@ public class Q2_5 {
 		lista.add("String 1");
 		lista.add("String 2");
 		lista.add("String 3");
-		System.out.println("Questão 2");
+		System.out.println("Questão 2\n---------");
 		for (String s : lista) {
 			System.out.println(s);
 		}
 		//
 		// Questão 3
 		//
-		// Bagunçando, randomicamente, o ArrayList lista
-		System.out.println("\nQuestão 3");
+		// Reordenando, randomicamente, o ArrayList lista
+		System.out.println("\nQuestão 3\n---------");
 		Collections.shuffle(lista);
 		for (String s : lista) {
 			System.out.println(s);
@@ -35,7 +35,7 @@ public class Q2_5 {
 		// Questão 4
 		//
 		// Procurando pela "String 2" e quantas vezes ela foi inserida
-		System.out.println("\nQuestão 4");
+		System.out.println("\nQuestão 4\n---------");
 		String a = "String 2";
 		System.out.printf("Utilizando o metodo binary Search, a posição do Array é %d\n",
 				Collections.binarySearch(lista, a));
@@ -47,7 +47,7 @@ public class Q2_5 {
 		// Questão 5
 		//
 		// Ordenando o ArrayList lista
-		System.out.println("\nQuestão 5");
+		System.out.println("\nQuestão 5\n---------");
 		Collections.sort(lista);
 		for (String s : lista) {
 			System.out.println(s);

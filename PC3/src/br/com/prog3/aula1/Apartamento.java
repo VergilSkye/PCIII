@@ -42,4 +42,12 @@ public class Apartamento {
 	public int hashCode() {
 		return codigo;
 	}
+
+	@Override
+	public String toString() {
+		return "Apartamento [area=" + area + ", numeroComodo=" + numeroComodo + "]";
+	}
+
+	
+	
 }
