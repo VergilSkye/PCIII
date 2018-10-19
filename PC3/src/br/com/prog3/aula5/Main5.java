@@ -9,7 +9,7 @@ public class Main5 {
 
     //Funcao para a criacao e impressao da tabela
     public static void imprimir(List<Servico> serv, List<Integer> qd){
-        //TODO Função ainda não implementada
+        //TODO Função ainda não implementadaa
     	// 
     	System.out.println("I\'m sorry.");
     }
